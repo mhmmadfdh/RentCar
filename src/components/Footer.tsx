@@ -6,12 +6,12 @@ export default function Footer({ onSelectCity }: { onSelectCity: (city: string) 
             <div className="bc-container">
                 <div className="bc-footer-main">
                     <div>
-                        <a href="#" className="bc-brand bc-brand-light" aria-label="Black Canion, beranda">
+                        <a href="#" className="bc-brand bc-brand-light" aria-label="Black Canyon, beranda">
                             <span className="bc-brand-mark">
                                 <CarFront size={22} strokeWidth={2.2} />
                             </span>
                             <span>
-                                BLACK<span className="bc-brand-thin">CANION</span>
+                                BLACK<span className="bc-brand-thin">CANYON</span>
                                 <small>YOUR JOURNEY, ELEVATED.</small>
                             </span>
                         </a>
@@ -61,7 +61,7 @@ export default function Footer({ onSelectCity }: { onSelectCity: (city: string) 
                 </div>
 
                 <div className="bc-footer-bottom">
-                    <span>© {new Date().getFullYear()} Black Canion. All rights reserved.</span>
+                    <span>© {new Date().getFullYear()} Black Canyon. All rights reserved.</span>
                     <a href="#armada">
                         Kredit foto <span className="bc-yellow">↗</span>
                     </a>

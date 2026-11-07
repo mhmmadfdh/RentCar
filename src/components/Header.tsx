@@ -7,12 +7,12 @@ export default function Header() {
     return (
         <header className="bc-header">
             <div className="bc-container bc-nav">
-                <a href="#" className="bc-brand bc-brand-light" aria-label="Black Canion, beranda">
+                <a href="#" className="bc-brand bc-brand-light" aria-label="Black Canyon, beranda">
                     <span className="bc-brand-mark">
                         <CarFront size={22} strokeWidth={2.2} />
                     </span>
                     <span>
-                        BLACK<span className="bc-brand-thin">CANION</span>
+                        BLACK<span className="bc-brand-thin">CANYON</span>
                         <small>YOUR JOURNEY, ELEVATED.</small>
                     </span>
                 </a>

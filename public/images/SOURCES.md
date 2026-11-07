@@ -1,4 +1,4 @@
-# Foto ilustrasi Black Canion
+# Foto ilustrasi Black Canyon
 
 Foto diunduh dari Wikimedia Commons dan Unsplash dalam ukuran yang disesuaikan. Semua merupakan ilustrasi
 untuk data contoh dan harus diganti dengan foto armada/lokasi sebenarnya saat operasional.

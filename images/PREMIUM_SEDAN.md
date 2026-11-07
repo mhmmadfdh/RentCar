@@ -1,4 +1,4 @@
-# Sedan hero Black Canion
+# Sedan hero Black Canyon
 
 Asset: `premium-sedan.png`. Generated using the built-in imagegen tool with a
 transparent background, then copied into this project. The car is an illustration

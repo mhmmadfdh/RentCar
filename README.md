@@ -1,6 +1,6 @@
-# Black Canion — Frontend Landing Page (UI Standalone)
+# Black Canyon — Frontend Landing Page (UI Standalone)
 
-Folder ini adalah versi **frontend khusus landing page** dari Black Canion, dengan tampilan yang **100% sama persis** dengan website utama, namun bersifat **tampilan saja (UI mock/dummy)** tanpa memerlukan backend, database SQLite/MySQL, Laravel, PHP, atau konfigurasi server.
+Folder ini adalah versi **frontend khusus landing page** dari Black Canyon, dengan tampilan yang **100% sama persis** dengan website utama, namun bersifat **tampilan saja (UI mock/dummy)** tanpa memerlukan backend, database SQLite/MySQL, Laravel, PHP, atau konfigurasi server.
 
 ---
 
@@ -39,7 +39,7 @@ frontend-landing-page/
 ├── public/                   # Asset publik Vite (favicon, images)
 ├── src/                      # Source code React & TypeScript
 │   ├── components/           # Komponen UI landing page
-│   │   ├── Header.tsx        # Navigasi & logo Black Canion
+│   │   ├── Header.tsx        # Navigasi & logo Black Canyon
 │   │   ├── Hero.tsx          # Reference Hero slider & search bar
 │   │   ├── Benefits.tsx      # 3 keunggulan layanan
 │   │   ├── Fleet.tsx         # Bagian armada dengan filter & sorting

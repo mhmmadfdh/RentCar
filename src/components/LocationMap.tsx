@@ -35,7 +35,7 @@ export default function LocationMap() {
             </div>
             <div className="bc-map-frame">
                 <iframe
-                    title="Peta lokasi contoh Black Canion — Monas, Jakarta"
+                    title="Peta lokasi contoh Black Canyon — Monas, Jakarta"
                     src="https://maps.google.com/maps?q=Monas%2C%20Jakarta&z=14&output=embed"
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"

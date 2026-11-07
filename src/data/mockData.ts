@@ -159,7 +159,7 @@ export const INITIAL_CARS: Car[] = [
 ];
 
 export const HERO_SLIDES = [
-    { src: './images/premium-sedan.png', alt: 'Sedan hitam premium, ilustrasi layanan Black Canion', cutout: true },
+    { src: './images/premium-sedan.png', alt: 'Sedan hitam premium, ilustrasi layanan Black Canyon', cutout: true },
     { src: './images/alphard.jpg', alt: 'Toyota Alphard, foto ilustrasi kendaraan premium', cutout: false },
     { src: './images/innova.jpg', alt: 'Toyota Innova Zenix, foto ilustrasi mobil keluarga', cutout: false },
     { src: './images/hrv.jpg', alt: 'Honda HR-V, foto ilustrasi SUV', cutout: false }
