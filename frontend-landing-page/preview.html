@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffb703">
+    <title>Black Canion — Tampilan Frontend Landing Page</title>
+    <meta name="description" content="Sewa mobil di Jakarta, Yogyakarta, dan Bengkulu. Tampilan frontend landing page Black Canion tanpa backend.">
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./css/rental.css">
+    <link rel="stylesheet" href="./css/rental-reference.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #ffe9bf;
+        }
+        .icon-inline {
+            display: inline-block;
+            vertical-align: middle;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+    </style>
+</head>
+<body>
+    <div class="bc-app bc-reference-home">
+        <!-- HEADER -->
+        <header class="bc-header">
+            <div class="bc-container bc-nav">
+                <a href="#" class="bc-brand bc-brand-light" aria-label="Black Canion, beranda">
+                    <span class="bc-brand-mark">
+                        <svg class="icon-inline" width="22" height="22" viewBox="0 0 24 24"><path d="m21 8-2 2-1.5-3.7A2 2 0 0 0 15.64 5H8.36a2 2 0 0 0-1.86 1.3L5 10 3 8"/><path d="M7 14h.01"/><path d="M17 14h.01"/><rect width="18" height="8" x="3" y="10" rx="2"/><path d="M5 18v2"/><path d="M19 18v2"/></svg>
+                    </span>
+                    <span>
+                        BLACK<span class="bc-brand-thin">CANION</span>
+                        <small>YOUR JOURNEY, ELEVATED.</small>
+                    </span>
+                </a>
+
+                <nav class="bc-desktop-nav" aria-label="Navigasi utama">
+                    <a href="#" class="bc-nav-active">Home</a>
+                    <a href="#armada">Fleet</a>
+                    <a href="#cara-sewa">Services</a>
+                    <a href="#destinasi">Areas we serve</a>
+                    <a href="#panduan">Blog</a>
+                    <a href="#lokasi">Contact</a>
+                </nav>
+
+                <div class="bc-nav-actions">
+                    <a href="#armada" class="bc-reference-register">Register</a>
+                    <span class="bc-reference-nav-divider" aria-hidden="true">|</span>
+                    <a href="#armada" class="bc-button bc-button-small">Sign In</a>
+                    <button class="bc-menu-button" id="btn-toggle-menu" aria-label="Buka navigasi">
+                        <svg class="icon-inline" width="22" height="22" viewBox="0 0 24 24"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                    </button>
+                </div>
+            </div>
+
+            <nav class="bc-mobile-nav" id="mobile-menu" style="display: none;">
+                <a href="#armada">Armada</a>
+                <a href="#cara-sewa">Cara sewa</a>
+                <a href="#destinasi">Destinasi</a>
+                <a href="#panduan">Panduan</a>
+                <a href="#lokasi">Lokasi</a>
+            </nav>
+        </header>
+
+        <!-- MAIN -->
+        <main>
+            <!-- HERO SECTION -->
+            <section class="bc-reference-hero" aria-label="Premium rental service">
+                <div class="bc-reference-gold" aria-hidden="true"></div>
+                <div class="bc-reference-copy">
+                    <h1>
+                        Premium<br>
+                        <span>Rental</span> Service
+                    </h1>
+                    <p>You can book the service below.</p>
+                    <div class="bc-reference-types" aria-label="Jenis kendaraan">
+                        <button type="button" class="vehicle-type-btn active" data-type="">
+                            <svg class="icon-inline" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.2"><path d="m21 8-2 2-1.5-3.7A2 2 0 0 0 15.64 5H8.36a2 2 0 0 0-1.86 1.3L5 10 3 8"/><rect width="18" height="8" x="3" y="10" rx="2"/></svg>
+                            Car
+                        </button>
+                        <button type="button" class="vehicle-type-btn" data-type="suv">
+                            <svg class="icon-inline" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.2"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
+                            SUV
+                        </button>
+                        <button type="button" class="vehicle-type-btn" data-type="minivan">
+                            <svg class="icon-inline" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.2"><rect width="16" height="16" x="4" y="3" rx="2"/><path d="M4 11h16"/><path d="M8 15h.01"/><path d="M16 15h.01"/></svg>
+                            Mini Van
+                        </button>
+                    </div>
+                </div>
+
+                <img id="hero-car-img" class="bc-reference-car" src="./images/premium-sedan.png" alt="Sedan hitam premium" fetchpriority="high">
+
+                <div class="bc-hero-slider-controls" role="group" aria-label="Navigasi gambar mobil">
+                    <button type="button" id="hero-prev" aria-label="Gambar mobil sebelumnya">
+                        <svg class="icon-inline" width="18" height="18" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+                    </button>
+                    <span id="hero-counter" aria-live="polite">1 / 4</span>
+                    <button type="button" id="hero-next" aria-label="Gambar mobil berikutnya">
+                        <svg class="icon-inline" width="18" height="18" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </button>
+                </div>
+
+                <div class="bc-reference-booking">
+                    <div class="bc-reference-stages" aria-label="Tahapan pemesanan">
+                        <span class="active"><i></i>Ride Details</span>
+                        <span><i></i>Quote</span>
+                        <span><i></i>Checkout</span>
+                    </div>
+
+                    <form class="bc-reference-search" id="hero-search-form" onsubmit="event.preventDefault(); document.getElementById('armada').scrollIntoView({behavior: 'smooth'});">
+                        <div class="bc-reference-search-item bc-reference-pickup">
+                            <svg class="icon-inline" width="19" height="19" viewBox="0 0 24 24" stroke-width="1.5"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+                            <label>
+                                <span>Pick-up Location</span>
+                                <select id="hero-city-select" aria-label="Lokasi pengambilan">
+                                    <option value="">Where are you?</option>
+                                    <option value="Jakarta">Jakarta</option>
+                                    <option value="Yogyakarta">Yogyakarta</option>
+                                    <option value="Bengkulu">Bengkulu</option>
+                                </select>
+                            </label>
+                        </div>
+
+                        <div class="bc-reference-search-item bc-reference-dropoff">
+                            <svg class="icon-inline" width="19" height="19" viewBox="0 0 24 24" stroke-width="1.5"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+                            <div>
+                                <span>Drop-off Location</span>
+                                <small id="hero-dropoff-label">Same as pick-up</small>
+                            </div>
+                        </div>
+
+                        <div class="bc-reference-search-item bc-reference-dates">
+                            <svg class="icon-inline" width="18" height="18" viewBox="0 0 24 24" stroke-width="1.5"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>
+                            <div>
+                                <div class="bc-reference-input-pair">
+                                    <input type="date" value="2026-11-08" required aria-label="Tanggal mulai sewa">
+                                    <span>–</span>
+                                    <input type="date" value="2026-11-09" required aria-label="Tanggal selesai sewa">
+                                </div>
+                                <small>Pick up - Drop off</small>
+                            </div>
+                        </div>
+
+                        <div class="bc-reference-search-item bc-reference-times">
+                            <svg class="icon-inline" width="18" height="18" viewBox="0 0 24 24" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16.5 12"/></svg>
+                            <div>
+                                <div class="bc-reference-input-pair">
+                                    <input type="time" value="09:00" required aria-label="Waktu mulai sewa">
+                                    <span>|</span>
+                                    <input type="time" value="09:00" required aria-label="Waktu selesai sewa">
+                                </div>
+                                <small>Pick up - Drop off</small>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="bc-reference-submit">Temukan armada</button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- BENEFITS SECTION -->
+            <section class="bc-container bc-benefits">
+                <div>
+                    <svg class="icon-inline" width="28" height="28" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+                    <span>
+                        <strong>Harga jelas di awal</strong>
+                        <small>Rincian biaya sebelum Anda memesan.</small>
+                    </span>
+                </div>
+                <div>
+                    <svg class="icon-inline" width="28" height="28" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16.5 12"/></svg>
+                    <span>
+                        <strong>Pesan tanpa ribet</strong>
+                        <small>Pilih mobil, isi data, kami hubungi Anda.</small>
+                    </span>
+                </div>
+                <div>
+                    <svg class="icon-inline" width="28" height="28" viewBox="0 0 24 24"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></svg>
+                    <span>
+                        <strong>Manusia, bukan sekadar sistem</strong>
+                        <small>Konfirmasi personal melalui WhatsApp.</small>
+                    </span>
+                </div>
+            </section>
+
+            <!-- FLEET SECTION -->
+            <section class="bc-fleet-section" id="armada">
+                <div class="bc-container">
+                    <div class="bc-section-heading">
+                        <div>
+                            <div class="bc-eyebrow">ARMADA PILIHAN</div>
+                            <h2>
+                                Mobil yang pas.
+                                <br class="bc-mobile-only"> Untuk setiap rencana.
+                            </h2>
+                            <p>Dari city car yang lincah hingga kabin lega untuk seluruh keluarga.</p>
+                        </div>
+                        <span class="bc-result-count" id="result-count">
+                            8 pilihan tersedia
+                            <svg class="icon-inline" width="17" height="17" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                        </span>
+                    </div>
+
+                    <div class="bc-filters">
+                        <div class="bc-category-tabs">
+                            <button type="button" class="tab-trans active" data-trans="">Semua transmisi</button>
+                            <button type="button" class="tab-trans" data-trans="AT">Matic</button>
+                            <button type="button" class="tab-trans" data-trans="MT">Manual</button>
+                        </div>
+
+                        <div class="bc-filter-actions">
+                            <button type="button" class="bc-filter-button" id="btn-filter-toggle">
+                                <svg class="icon-inline" width="16" height="16" viewBox="0 0 24 24"><line x1="21" x2="14" y1="4" y2="4"/><line x1="10" x2="3" y1="4" y2="4"/><line x1="21" x2="12" y1="12" y2="12"/><line x1="8" x2="3" y1="12" y2="12"/><line x1="21" x2="16" y1="20" y2="20"/><line x1="12" x2="3" y1="20" y2="20"/><line x1="14" x2="14" y1="2" y2="6"/><line x1="8" x2="8" y1="10" y2="14"/><line x1="16" x2="16" y1="18" y2="22"/></svg>
+                                Filter
+                            </button>
+                            <select id="filter-sort" aria-label="Urutkan mobil">
+                                <option value="recommended">Rekomendasi</option>
+                                <option value="price_asc">Harga terendah</option>
+                                <option value="price_desc">Harga tertinggi</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="bc-expanded-filters" id="expanded-filters" style="display: none;">
+                        <label class="bc-field">
+                            Merek
+                            <select id="filter-brand">
+                                <option value="">Semua merek</option>
+                                <option value="Toyota">Toyota</option>
+                                <option value="Honda">Honda</option>
+                                <option value="Mitsubishi">Mitsubishi</option>
+                            </select>
+                        </label>
+
+                        <label class="bc-field">
+                            Kapasitas
+                            <select id="filter-seats">
+                                <option value="">Semua kapasitas</option>
+                                <option value="4">4 kursi</option>
+                                <option value="6">6 kursi</option>
+                                <option value="7">7 kursi atau lebih</option>
+                            </select>
+                        </label>
+
+                        <label class="bc-field">
+                            Harga maksimum / hari
+                            <select id="filter-maxprice">
+                                <option value="">Tanpa batas</option>
+                                <option value="350000">Rp 350.000</option>
+                                <option value="500000">Rp 500.000</option>
+                                <option value="750000">Rp 750.000</option>
+                                <option value="1000000">Rp 1.000.000</option>
+                                <option value="2500000">Rp 2.500.000</option>
+                            </select>
+                        </label>
+
+                        <button type="button" class="bc-button" id="btn-apply-filter">Terapkan filter</button>
+                        <button type="button" class="bc-text-button" id="btn-reset-filter">
+                            <svg class="icon-inline" width="14" height="14" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                            Reset
+                        </button>
+                    </div>
+
+                    <div class="bc-search-context" id="fleet-context" style="display: none;">
+                        <svg class="icon-inline" width="14" height="14" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+                        <span id="context-city-name">Semua kota</span>
+                        <span>·</span>
+                        Semua armada di kota pilihan
+                    </div>
+
+                    <div class="bc-car-grid" id="car-grid">
+                        <!-- Car 1: Avanza Jakarta -->
+                        <article class="bc-car-card" data-city="Jakarta" data-trans="AT" data-brand="Toyota" data-seats="7" data-price="350000">
+                            <a href="#armada" class="bc-car-photo">
+                                <img src="./images/avanza.jpg" alt="Toyota Avanza" loading="lazy">
+                                <span class="bc-car-category">MPV</span>
+                                <span class="bc-photo-caption">Foto ilustrasi</span>
+                            </a>
+                            <div class="bc-car-content">
+                                <div class="bc-car-location">
+                                    <svg class="icon-inline" width="13" height="13" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+                                    Jakarta <span>•</span>Lepas kunci
+                                </div>
+                                <a href="#armada"><h3>Toyota Avanza</h3></a>
+                                <div class="bc-car-specs">
+                                    <span><svg class="icon-inline" width="15" height="15" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> 7 kursi</span>
+                                    <span><svg class="icon-inline" width="15" height="15" viewBox="0 0 24 24"><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/><path d="M20 7h-9"/><path d="M14 17H5"/></svg> Matic</span>
+                                    <span><svg class="icon-inline" width="15" height="15" viewBox="0 0 24 24"><path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg> 3 bagasi</span>
+                                </div>
+                                <div class="bc-car-bottom">
+                                    <div>
+                                        <small>Mulai dari</small>
+                                        <strong>Rp 350.000<span> / hari</span></strong>
+                                    </div>
+                                    <a href="#armada" class="bc-card-arrow" aria-label="Lihat detail Toyota Avanza">
+                                        <svg class="icon-inline" width="21" height="21" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Car 2: Innova Jakarta -->
+                        <article class="bc-car-card" data-city="Jakarta" data-trans="AT" data-brand="Toyota" data-seats="7" data-price="750000">
+                            <a href="#armada" class="bc-car-photo">
+                                <img src="./images/innova.jpg" alt="Toyota Innova Zenix" loading="lazy">
+                                <span class="bc-car-category">Premium MPV</span>
+                                <span class="bc-photo-caption">Foto ilustrasi</span>
+                            </a>
+                            <div class="bc-car-content">
+                                <div class="bc-car-location">
+                                    <svg class="icon-inline" width="13" height="13" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+                                    Jakarta <span>•</span>Lepas kunci
+                                </div>
+                                <a href="#armada"><h3>Toyota Innova Zenix</h3></a>
+                                <div class="bc-car-specs">
+                                    <span><svg class="icon-inline" width="15" height="15" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> 7 kursi</span>
+                                    <span><svg class="icon-inline" width="15" height="15" viewBox="0 0 24 24"><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/><path d="M20 7h-9"/><path d="M14 17H5"/></svg> Matic</span>
+                                    <span><svg class="icon-inline" width="15" height="15" viewBox="0 0 24 24"><path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg> 4 bagasi</span>
+                                </div>
+                                <div class="bc-car-bottom">
+                                    <div>
+                                        <small>Mulai dari</small>
+                                        <strong>Rp 750.000<span> / hari</span></strong>
+                                    </div>
+                                    <a href="#armada" class="bc-card-arrow" aria-label="Lihat detail Toyota Innova Zenix">
+                                        <svg class="icon-inline" width="21" height="21" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Car 3: Brio Yogyakarta -->
+                        <article class="bc-car-card" data-city="Yogyakarta" data-trans="AT" data-brand="Honda" data-seats="4" data-price="275000">
+                            <a href="#armada" class="bc-car-photo">
+                                <img src="./images/brio.jpg" alt="Honda Brio" loading="lazy">
+                                <span class="bc-car-category">City Car</span>
+                                <span class="bc-photo-caption">Foto ilustrasi</span>
+                            </a>
+                            <div class="bc-car-content">
+                                <div class="bc-car-location">
+                                    <svg class="icon-inline" width="13" height="13" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+                                    Yogyakarta <span>•</span>Lepas kunci
+                                </div>
+                                <a href="#armada"><h3>Honda Brio</h3></a>
+                                <div class="bc-car-specs">
+                                    <span><svg class="icon-inline" width="15" height="15" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> 4 kursi</span>
+                                    <span><svg class="icon-inline" width="15" height="15" viewBox="0 0 24 24"><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/><path d="M20 7h-9"/><path d="M14 17H5"/></svg> Matic</span>
+                                    <span><svg class="icon-inline" width="15" height="15" viewBox="0 0 24 24"><path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg> 2 bagasi</span>
+                                </div>
+                                <div class="bc-car-bottom">
+                                    <div>
+                                        <small>Mulai dari</small>
+                                        <strong>Rp 275.000<span> / hari</span></strong>
+                                    </div>
+                                    <a href="#armada" class="bc-card-arrow" aria-label="Lihat detail Honda Brio">
+                                        <svg class="icon-inline" width="21" height="21" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Car 4: Rush Bengkulu -->
+                        <article class="bc-car-card" data-city="Bengkulu" data-trans="MT" data-brand="Toyota" data-seats="7" data-price="400000">
+                            <a href="#armada" class="bc-car-photo">
+                                <img src="./images/rush.jpg" alt="Toyota Rush" loading="lazy">
+                                <span class="bc-car-category">SUV</span>
+                                <span class="bc-photo-caption">Foto ilustrasi</span>
+                            </a>
+                            <div class="bc-car-content">
+                                <div class="bc-car-location">
+                                    <svg class="icon-inline" width="13" height="13" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+                                    Bengkulu <span>•</span>Lepas kunci
+                                </div>
+                                <a href="#armada"><h3>Toyota Rush</h3></a>
+                                <div class="bc-car-specs">
+                                    <span><svg class="icon-inline" width="15" height="15" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> 7 kursi</span>
+                                    <span><svg class="icon-inline" width="15" height="15" viewBox="0 0 24 24"><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/><path d="M20 7h-9"/><path d="M14 17H5"/></svg> Manual</span>
+                                    <span><svg class="icon-inline" width="15" height="15" viewBox="0 0 24 24"><path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg> 3 bagasi</span>
+                                </div>
+                                <div class="bc-car-bottom">
+                                    <div>
+                                        <small>Mulai dari</small>
+                                        <strong>Rp 400.000<span> / hari</span></strong>
+                                    </div>
+                                    <a href="#armada" class="bc-card-arrow" aria-label="Lihat detail Toyota Rush">
+                                        <svg class="icon-inline" width="21" height="21" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Car 5: Xpander Yogyakarta -->
+                        <article class="bc-car-card" data-city="Yogyakarta" data-trans="AT" data-brand="Mitsubishi" data-seats="7" data-price="425000">
+                            <a href="#armada" class="bc-car-photo">
+                                <img src="./images/xpander.jpg" alt="Mitsubishi Xpander" loading="lazy">
+                                <span class="bc-car-category">MPV</span>
+                                <span class="bc-photo-caption">Foto ilustrasi</span>
+                            </a>
+                            <div class="bc-car-content">
+                                <div class="bc-car-location">
+                                    <svg class="icon-inline" width="13" height="13" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+                                    Yogyakarta <span>•</span>Lepas kunci
+                                </div>
+                                <a href="#armada"><h3>Mitsubishi Xpander</h3></a>
+                                <div class="bc-car-specs">
+                                    <span><svg class="icon-inline" width="15" height="15" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> 7 kursi</span>
+                                    <span><svg class="icon-inline" width="15" height="15" viewBox="0 0 24 24"><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/><path d="M20 7h-9"/><path d="M14 17H5"/></svg> Matic</span>
+                                    <span><svg class="icon-inline" width="15" height="15" viewBox="0 0 24 24"><path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg> 3 bagasi</span>
+                                </div>
+                                <div class="bc-car-bottom">
+                                    <div>
+                                        <small>Mulai dari</small>
+                                        <strong>Rp 425.000<span> / hari</span></strong>
+                                    </div>
+                                    <a href="#armada" class="bc-card-arrow" aria-label="Lihat detail Mitsubishi Xpander">
+                                        <svg class="icon-inline" width="21" height="21" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Car 6: HR-V Jakarta -->
+                        <article class="bc-car-card" data-city="Jakarta" data-trans="AT" data-brand="Honda" data-seats="5" data-price="600000">
+                            <a href="#armada" class="bc-car-photo">
+                                <img src="./images/hrv.jpg" alt="Honda HR-V" loading="lazy">
+                                <span class="bc-car-category">SUV</span>
+                                <span class="bc-photo-caption">Foto ilustrasi</span>
+                            </a>
+                            <div class="bc-car-content">
+                                <div class="bc-car-location">
+                                    <svg class="icon-inline" width="13" height="13" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+                                    Jakarta <span>•</span>Lepas kunci
+                                </div>
+                                <a href="#armada"><h3>Honda HR-V</h3></a>
+                                <div class="bc-car-specs">
+                                    <span><svg class="icon-inline" width="15" height="15" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> 5 kursi</span>
+                                    <span><svg class="icon-inline" width="15" height="15" viewBox="0 0 24 24"><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/><path d="M20 7h-9"/><path d="M14 17H5"/></svg> Matic</span>
+                                    <span><svg class="icon-inline" width="15" height="15" viewBox="0 0 24 24"><path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg> 3 bagasi</span>
+                                </div>
+                                <div class="bc-car-bottom">
+                                    <div>
+                                        <small>Mulai dari</small>
+                                        <strong>Rp 600.000<span> / hari</span></strong>
+                                    </div>
+                                    <a href="#armada" class="bc-card-arrow" aria-label="Lihat detail Honda HR-V">
+                                        <svg class="icon-inline" width="21" height="21" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Car 7: Avanza Bengkulu -->
+                        <article class="bc-car-card" data-city="Bengkulu" data-trans="MT" data-brand="Toyota" data-seats="7" data-price="325000">
+                            <a href="#armada" class="bc-car-photo">
+                                <img src="./images/avanza.jpg" alt="Toyota Avanza" loading="lazy">
+                                <span class="bc-car-category">MPV</span>
+                                <span class="bc-photo-caption">Foto ilustrasi</span>
+                            </a>
+                            <div class="bc-car-content">
+                                <div class="bc-car-location">
+                                    <svg class="icon-inline" width="13" height="13" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+                                    Bengkulu <span>•</span>Lepas kunci
+                                </div>
+                                <a href="#armada"><h3>Toyota Avanza</h3></a>
+                                <div class="bc-car-specs">
+                                    <span><svg class="icon-inline" width="15" height="15" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> 7 kursi</span>
+                                    <span><svg class="icon-inline" width="15" height="15" viewBox="0 0 24 24"><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/><path d="M20 7h-9"/><path d="M14 17H5"/></svg> Manual</span>
+                                    <span><svg class="icon-inline" width="15" height="15" viewBox="0 0 24 24"><path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg> 3 bagasi</span>
+                                </div>
+                                <div class="bc-car-bottom">
+                                    <div>
+                                        <small>Mulai dari</small>
+                                        <strong>Rp 325.000<span> / hari</span></strong>
+                                    </div>
+                                    <a href="#armada" class="bc-card-arrow" aria-label="Lihat detail Toyota Avanza">
+                                        <svg class="icon-inline" width="21" height="21" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Car 8: Alphard Jakarta -->
+                        <article class="bc-car-card" data-city="Jakarta" data-trans="AT" data-brand="Toyota" data-seats="6" data-price="2500000">
+                            <a href="#armada" class="bc-car-photo">
+                                <img src="./images/alphard.jpg" alt="Toyota Alphard" loading="lazy">
+                                <span class="bc-car-category">Luxury</span>
+                                <span class="bc-photo-caption">Foto ilustrasi</span>
+                            </a>
+                            <div class="bc-car-content">
+                                <div class="bc-car-location">
+                                    <svg class="icon-inline" width="13" height="13" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+                                    Jakarta <span>•</span>Lepas kunci
+                                </div>
+                                <a href="#armada"><h3>Toyota Alphard</h3></a>
+                                <div class="bc-car-specs">
+                                    <span><svg class="icon-inline" width="15" height="15" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> 6 kursi</span>
+                                    <span><svg class="icon-inline" width="15" height="15" viewBox="0 0 24 24"><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/><path d="M20 7h-9"/><path d="M14 17H5"/></svg> Matic</span>
+                                    <span><svg class="icon-inline" width="15" height="15" viewBox="0 0 24 24"><path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg> 4 bagasi</span>
+                                </div>
+                                <div class="bc-car-bottom">
+                                    <div>
+                                        <small>Mulai dari</small>
+                                        <strong>Rp 2.500.000<span> / hari</span></strong>
+                                    </div>
+                                    <a href="#armada" class="bc-card-arrow" aria-label="Lihat detail Toyota Alphard">
+                                        <svg class="icon-inline" width="21" height="21" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <p class="bc-catalog-note">
+                        Armada dan tarif saat ini merupakan data contoh untuk pengembangan. Foto merupakan ilustrasi kategori kendaraan.
+                    </p>
+                </div>
+            </section>
+
+            <!-- HOW IT WORKS SECTION -->
+            <section class="bc-container bc-how-section" id="cara-sewa">
+                <div class="bc-section-heading">
+                    <div>
+                        <div class="bc-eyebrow">SEDERHANA DARI AWAL</div>
+                        <h2>
+                            Tiga langkah.<br>
+                            Satu perjalanan menyenangkan.
+                        </h2>
+                    </div>
+                    <p>
+                        Lebih sedikit urusan.<br>
+                        Lebih banyak waktu untuk perjalanan Anda.
+                    </p>
+                </div>
+                <div class="bc-how-grid">
+                    <article>
+                        <div class="bc-how-top">
+                            <span><svg class="icon-inline" width="25" height="25" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
+                            <b>01</b>
+                        </div>
+                        <h3>Temukan mobilmu</h3>
+                        <p>Pilih kota, tentukan jadwal, dan temukan armada yang sesuai kebutuhan.</p>
+                    </article>
+
+                    <article>
+                        <div class="bc-how-top">
+                            <span><svg class="icon-inline" width="25" height="25" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span>
+                            <b>02</b>
+                        </div>
+                        <h3>Lengkapi pemesanan</h3>
+                        <p>Isi nomor WhatsApp, unggah KTP dan SIM, lalu kirim permintaan sewa.</p>
+                    </article>
+
+                    <article>
+                        <div class="bc-how-top">
+                            <span><svg class="icon-inline" width="25" height="25" viewBox="0 0 24 24"><path d="m21 8-2 2-1.5-3.7A2 2 0 0 0 15.64 5H8.36a2 2 0 0 0-1.86 1.3L5 10 3 8"/><rect width="18" height="8" x="3" y="10" rx="2"/></svg></span>
+                            <b>03</b>
+                        </div>
+                        <h3>Kami hubungi, kamu berangkat</h3>
+                        <p>Admin menghubungi via WhatsApp untuk verifikasi, pembayaran, dan konfirmasi perjalanan.</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- DESTINATIONS SECTION -->
+            <section class="bc-destinations" id="destinasi">
+                <div class="bc-container">
+                    <div class="bc-section-heading">
+                        <div>
+                            <div class="bc-eyebrow">KOTA PILIHAN, CERITA BERBEDA</div>
+                            <h2>Ke mana cerita berikutnya?</h2>
+                            <p>Tiga kota. Banyak kemungkinan. Semuanya dimulai dari sini.</p>
+                        </div>
+                    </div>
+                    <div class="bc-destination-grid">
+                        <div class="bc-destination dest-card" data-city="Jakarta" style="cursor: pointer;">
+                            <img src="./images/jakarta.jpg" alt="Ilustrasi destinasi Jakarta" loading="lazy">
+                            <div>
+                                <span>JELAJAHI</span>
+                                <h3>Jakarta</h3>
+                                <p>Untuk ritme kota yang tak berhenti.</p>
+                            </div>
+                            <span class="bc-destination-arrow">
+                                <svg class="icon-inline" width="21" height="21" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                            </span>
+                        </div>
+
+                        <div class="bc-destination dest-card" data-city="Yogyakarta" style="cursor: pointer;">
+                            <img src="./images/yogyakarta.jpg" alt="Ilustrasi destinasi Yogyakarta" loading="lazy">
+                            <div>
+                                <span>JELAJAHI</span>
+                                <h3>Yogyakarta</h3>
+                                <p>Pelan-pelan, temukan cerita baru.</p>
+                            </div>
+                            <span class="bc-destination-arrow">
+                                <svg class="icon-inline" width="21" height="21" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                            </span>
+                        </div>
+
+                        <div class="bc-destination dest-card" data-city="Bengkulu" style="cursor: pointer;">
+                            <img src="./images/bengkulu.jpg" alt="Ilustrasi destinasi Bengkulu" loading="lazy">
+                            <div>
+                                <span>JELAJAHI</span>
+                                <h3>Bengkulu</h3>
+                                <p>Jalan pesisir dan kebebasan baru.</p>
+                            </div>
+                            <span class="bc-destination-arrow">
+                                <svg class="icon-inline" width="21" height="21" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- JOURNAL SECTION -->
+            <section class="bc-reference-blog" id="panduan">
+                <span class="bc-eyebrow">THE BLACK CANION JOURNAL</span>
+                <h2>Perjalanan nyaman dimulai dari persiapan.</h2>
+                <div class="bc-reference-blog-grid">
+                    <article>
+                        <span>01 / PILIH ARMADA</span>
+                        <h3>Mobil yang tepat untuk rencana Anda.</h3>
+                        <p>Perhatikan jumlah penumpang, kapasitas bagasi, dan transmisi. Gunakan filter armada untuk memilih mobil yang sesuai.</p>
+                    </article>
+                    <article>
+                        <span>02 / SEBELUM BERANGKAT</span>
+                        <h3>Siapkan dokumen, nikmati perjalanan.</h3>
+                        <p>Unggah foto KTP dan SIM A yang jelas saat memesan. Bawa dokumen asli ketika mengambil kendaraan.</p>
+                    </article>
+                    <article>
+                        <span>03 / RENCANAKAN JADWAL</span>
+                        <h3>Kenali waktu dan rincian sewa.</h3>
+                        <p>Sewa dihitung per 24 jam dan dibulatkan ke hari berikutnya. Koordinasikan lokasi pengambilan dan pembayaran dengan admin melalui WhatsApp.</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- MAP SECTION -->
+            <section class="bc-container bc-map-section" id="lokasi">
+                <div class="bc-map-info">
+                    <span class="bc-eyebrow">TEMUKAN TITIK PERJALANAN ANDA</span>
+                    <h2>
+                        Lebih dekat.<br>
+                        Lebih mudah berangkat.
+                    </h2>
+                    <p>Lihat titik lokasi di peta dan rencanakan perjalanan Anda sebelum berangkat.</p>
+                    <div class="bc-map-address">
+                        <span class="bc-map-pin">
+                            <svg class="icon-inline" width="22" height="22" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+                        </span>
+                        <div>
+                            <strong>Monas, Jakarta</strong>
+                            <span>Jakarta Pusat, DKI Jakarta</span>
+                        </div>
+                        <small>Lokasi contoh</small>
+                    </div>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=Monas%2C%20Jakarta" target="_blank" rel="noopener noreferrer" class="bc-button">
+                        Buka petunjuk arah
+                        <svg class="icon-inline" width="18" height="18" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                    </a>
+                    <p class="bc-helper">
+                        Titik ini sementara untuk contoh peta, bukan alamat rental. Lokasi pengambilan sebenarnya dikonfirmasi admin melalui WhatsApp.
+                    </p>
+                </div>
+                <div class="bc-map-frame">
+                    <iframe
+                        title="Peta lokasi contoh Black Canion — Monas, Jakarta"
+                        src="https://maps.google.com/maps?q=Monas%2C%20Jakarta&z=14&output=embed"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        allowfullscreen>
+                    </iframe>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Monas%2C%20Jakarta" target="_blank" rel="noopener noreferrer" class="bc-map-open">
+                        Lihat di Google Maps
+                        <svg class="icon-inline" width="14" height="14" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                    </a>
+                </div>
+            </section>
+
+            <!-- BOTTOM CTA -->
+            <section class="bc-container bc-bottom-cta">
+                <div>
+                    <span class="bc-eyebrow">
+                        <svg class="icon-inline" width="14" height="14" viewBox="0 0 24 24"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+                        READY FOR YOUR NEXT JOURNEY?
+                    </span>
+                    <h2>
+                        Rencana sudah ada?<br>
+                        Mobilnya, biar kami bantu.
+                    </h2>
+                </div>
+                <a href="#armada" class="bc-button">
+                    Temukan mobil saya
+                    <svg class="icon-inline" width="18" height="18" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="bc-footer">
+            <div class="bc-container">
+                <div class="bc-footer-main">
+                    <div>
+                        <a href="#" class="bc-brand bc-brand-light" aria-label="Black Canion, beranda">
+                            <span class="bc-brand-mark">
+                                <svg class="icon-inline" width="22" height="22" viewBox="0 0 24 24"><path d="m21 8-2 2-1.5-3.7A2 2 0 0 0 15.64 5H8.36a2 2 0 0 0-1.86 1.3L5 10 3 8"/><rect width="18" height="8" x="3" y="10" rx="2"/></svg>
+                            </span>
+                            <span>
+                                BLACK<span class="bc-brand-thin">CANION</span>
+                                <small>YOUR JOURNEY, ELEVATED.</small>
+                            </span>
+                        </a>
+                        <p>
+                            Lebih dari sekadar tujuan.<br>
+                            Temukan kebebasan di setiap perjalanan.
+                        </p>
+                    </div>
+
+                    <div>
+                        <span class="bc-footer-label">JELAJAHI</span>
+                        <a href="#armada">Pilihan armada</a>
+                        <a href="#cara-sewa">Cara pemesanan</a>
+                        <a href="#lokasi">Titik lokasi</a>
+                    </div>
+
+                    <div>
+                        <span class="bc-footer-label">KOTA LAYANAN</span>
+                        <a href="#armada" class="footer-city-link" data-city="Jakarta">Jakarta</a>
+                        <a href="#armada" class="footer-city-link" data-city="Yogyakarta">Yogyakarta</a>
+                        <a href="#armada" class="footer-city-link" data-city="Bengkulu">Bengkulu</a>
+                    </div>
+
+                    <div class="bc-footer-note">
+                        <span class="bc-footer-label">PERJALANAN ANDA, PRIORITAS KAMI.</span>
+                        <p>
+                            Pemesanan mudah. Harga transparan.<br>
+                            Dikonfirmasi langsung oleh tim kami.
+                        </p>
+                        <span class="bc-footer-pill">
+                            <span></span>
+                            Admin terhubung via WhatsApp
+                        </span>
+                    </div>
+                </div>
+
+                <div class="bc-footer-bottom">
+                    <span>© 2026 Black Canion. All rights reserved.</span>
+                    <a href="#armada">Kredit foto <span class="bc-yellow">↗</span></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- CLIENT INTERACTIVITY (Vanilla JS, Zero Setup) -->
+    <script>
+        // Hero Slider
+        const heroImages = [
+            { src: './images/premium-sedan.png', alt: 'Sedan hitam premium', cutout: true },
+            { src: './images/alphard.jpg', alt: 'Toyota Alphard', cutout: false },
+            { src: './images/innova.jpg', alt: 'Toyota Innova Zenix', cutout: false },
+            { src: './images/hrv.jpg', alt: 'Honda HR-V', cutout: false }
+        ];
+        let heroIdx = 0;
+        const heroImg = document.getElementById('hero-car-img');
+        const heroCounter = document.getElementById('hero-counter');
+
+        function updateHeroImage(idx) {
+            heroIdx = (idx + heroImages.length) % heroImages.length;
+            const item = heroImages[heroIdx];
+            heroImg.src = item.src;
+            heroImg.alt = item.alt;
+            heroImg.className = 'bc-reference-car' + (item.cutout ? '' : ' bc-reference-car-photo');
+            heroCounter.textContent = `${heroIdx + 1} / ${heroImages.length}`;
+        }
+        document.getElementById('hero-prev').addEventListener('click', () => updateHeroImage(heroIdx - 1));
+        document.getElementById('hero-next').addEventListener('click', () => updateHeroImage(heroIdx + 1));
+
+        // Vehicle Type Toggle
+        document.querySelectorAll('.vehicle-type-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.vehicle-type-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('btn-toggle-menu');
+        const mobileNav = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            const isOpen = mobileNav.style.display !== 'none';
+            mobileNav.style.display = isOpen ? 'none' : 'flex';
+        });
+
+        // City Search & Dropdown sync
+        const heroCitySelect = document.getElementById('hero-city-select');
+        const dropoffLabel = document.getElementById('hero-dropoff-label');
+        const fleetContext = document.getElementById('fleet-context');
+        const contextCityName = document.getElementById('context-city-name');
+
+        function setCity(city) {
+            heroCitySelect.value = city;
+            dropoffLabel.textContent = city || 'Same as pick-up';
+            if (city) {
+                fleetContext.style.display = 'flex';
+                contextCityName.textContent = city;
+            } else {
+                fleetContext.style.display = 'none';
+            }
+            filterCards();
+        }
+        heroCitySelect.addEventListener('change', (e) => setCity(e.target.value));
+
+        // Filter Toggle
+        const btnFilterToggle = document.getElementById('btn-filter-toggle');
+        const expandedFilters = document.getElementById('expanded-filters');
+        btnFilterToggle.addEventListener('click', () => {
+            const isShown = expandedFilters.style.display !== 'none';
+            expandedFilters.style.display = isShown ? 'none' : 'grid';
+            btnFilterToggle.classList.toggle('active', !isShown);
+        });
+
+        // Transmission Tabs
+        let selectedTrans = '';
+        document.querySelectorAll('.tab-trans').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.tab-trans').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                selectedTrans = tab.dataset.trans;
+                filterCards();
+            });
+        });
+
+        // Filter Elements
+        const filterBrand = document.getElementById('filter-brand');
+        const filterSeats = document.getElementById('filter-seats');
+        const filterMaxPrice = document.getElementById('filter-maxprice');
+        const filterSort = document.getElementById('filter-sort');
+        const resultCount = document.getElementById('result-count');
+
+        function filterCards() {
+            const cards = Array.from(document.querySelectorAll('.bc-car-card'));
+            const city = heroCitySelect.value;
+            const brand = filterBrand.value;
+            const seats = filterSeats.value;
+            const maxPrice = filterMaxPrice.value ? parseInt(filterMaxPrice.value) : 0;
+            const sort = filterSort.value;
+
+            let visibleCount = 0;
+            cards.forEach(card => {
+                let show = true;
+                if (city && card.dataset.city !== city) show = false;
+                if (selectedTrans && card.dataset.trans !== selectedTrans) show = false;
+                if (brand && card.dataset.brand !== brand) show = false;
+                if (seats) {
+                    const cSeats = parseInt(card.dataset.seats);
+                    if (seats === '7' && cSeats < 7) show = false;
+                    else if (seats !== '7' && cSeats !== parseInt(seats)) show = false;
+                }
+                if (maxPrice && parseInt(card.dataset.price) > maxPrice) show = false;
+
+                card.style.display = show ? 'flex' : 'none';
+                if (show) visibleCount++;
+            });
+
+            // Sort visible
+            const grid = document.getElementById('car-grid');
+            const sorted = cards.slice().sort((a, b) => {
+                const priceA = parseInt(a.dataset.price);
+                const priceB = parseInt(b.dataset.price);
+                if (sort === 'price_asc') return priceA - priceB;
+                if (sort === 'price_desc') return priceB - priceA;
+                return 0;
+            });
+            sorted.forEach(c => grid.appendChild(c));
+
+            resultCount.innerHTML = `${visibleCount} pilihan tersedia <svg class="icon-inline" width="17" height="17" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>`;
+        }
+
+        document.getElementById('btn-apply-filter').addEventListener('click', filterCards);
+        filterSort.addEventListener('change', filterCards);
+
+        document.getElementById('btn-reset-filter').addEventListener('click', () => {
+            setCity('');
+            selectedTrans = '';
+            document.querySelectorAll('.tab-trans').forEach(t => t.classList.toggle('active', t.dataset.trans === ''));
+            filterBrand.value = '';
+            filterSeats.value = '';
+            filterMaxPrice.value = '';
+            filterSort.value = 'recommended';
+            filterCards();
+        });
+
+        // Destinations card click
+        document.querySelectorAll('.dest-card').forEach(card => {
+            card.addEventListener('click', () => {
+                setCity(card.dataset.city);
+                document.getElementById('armada').scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Footer city link click
+        document.querySelectorAll('.footer-city-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                setCity(link.dataset.city);
+                document.getElementById('armada').scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
+

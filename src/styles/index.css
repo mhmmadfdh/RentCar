@@ -1,0 +1,12 @@
+@import './rental.css';
+@import './rental-reference.css';
+
+/* Base tweaks for standalone frontend preview */
+body {
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #ffe9bf;
+}
+
